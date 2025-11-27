@@ -9,12 +9,14 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/">API reference</a><br>
+  <a href="https://openpeeps.github.io/webtokens/">API reference</a><br>
   <img src="https://github.com/openpeeps/webtokens/workflows/test/badge.svg" alt="Github Actions">  <img src="https://github.com/openpeeps/webtokens/workflows/docs/badge.svg" alt="Github Actions">
 </p>
 
 ## About
 This package provides Nim bindings for [LibJWT](https://github.com/benmcollins/libjwt), a C library that supports the following standards JWS, JWE, JWK, JWA and JWTs. It allows you to create, sign, verify, and decode JSON Web Tokens in your Nim applications.
+
+**Low-level and High-level APIs** are provided to work with JWTs, JWKs, and JWS/JWE tokens.
 
 ### Prerequisites
 Check the official [LibJWT installation guide](https://github.com/benmcollins/libjwt?tab=readme-ov-file#construction-build-prerequisites)
