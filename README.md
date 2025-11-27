@@ -1,5 +1,6 @@
 <p align="center">
-  👑 Nim bindings for LibJWT<br>
+  <img src="https://www.jwt.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fjwt-flower.f20616b0.png&w=1920&q=75" width="48px" height="48px" alt="JWT Logo"><br>
+  👑 Nim lang bindings for LibJWT<br>
   JSON Web Token Library
 </p>
 
