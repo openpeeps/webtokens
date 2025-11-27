@@ -1,0 +1,7 @@
+nimTitle	jws	webtokens/jws.html	module webtokens/jws		0
+nim	JwsHeader	webtokens/jws.html#JwsHeader	object JwsHeader		12
+nim	JwsClaims	webtokens/jws.html#JwsClaims	type JwsClaims		17
+nim	JwsOptions	webtokens/jws.html#JwsOptions	object JwsOptions		20
+nim	resolveKey	webtokens/jws.html#resolveKey,JwkSet,JwsHeader	proc resolveKey(set: JwkSet; header: JwsHeader): tuple[alg: Alg, key: JwkItem]		31
+nim	sign	webtokens/jws.html#sign,JwkSet,JwsHeader,JwsClaims,JwsOptions	proc sign(set: JwkSet; header: JwsHeader; claims: JwsClaims;\n     opt: JwsOptions = JwsOptions()): string		42
+nim	verify	webtokens/jws.html#verify,JwkSet,JwsHeader,string,JwsOptions	proc verify(set: JwkSet; header: JwsHeader; token: string;\n       opt: JwsOptions = JwsOptions()): JsonNode		69

@@ -1,0 +1,80 @@
+nimTitle	api	webtokens/api.html	module webtokens/api		0
+nim	JwtError	webtokens/api.html#JwtError	object JwtError		21
+nim	JwkError	webtokens/api.html#JwkError	object JwkError		22
+nim	Alg	webtokens/api.html#Alg	type Alg		24
+nim	ClaimKind	webtokens/api.html#ClaimKind	type ClaimKind		25
+nim	CryptoProvider	webtokens/api.html#CryptoProvider	type CryptoProvider		27
+nim	JwkSet	webtokens/api.html#JwkSet	type JwkSet		29
+nim	JwkItem	webtokens/api.html#JwkItem	type JwkItem		32
+nim	JwtBuilder	webtokens/api.html#JwtBuilder	type JwtBuilder		36
+nim	JwtChecker	webtokens/api.html#JwtChecker	type JwtChecker		39
+nim	raiseBuilder	webtokens/api.html#raiseBuilder,JwtBuilder,string	proc raiseBuilder(b: JwtBuilder; ctx: string)		60
+nim	raiseChecker	webtokens/api.html#raiseChecker,JwtChecker,string	proc raiseChecker(c: JwtChecker; ctx: string)		64
+nim	raiseJwk	webtokens/api.html#raiseJwk,JwkSet,string	proc raiseJwk(s: JwkSet; ctx: string)		68
+nim	toEpoch	webtokens/api.html#toEpoch,Time	proc toEpoch(t: Time): int64		72
+nim	`$`	webtokens/api.html#$,jwt_alg_t	proc `$`(alg: Alg): string		75
+nim	parseAlg	webtokens/api.html#parseAlg,string	proc parseAlg(s: string): Alg		76
+nim	currentCryptoProviderName	webtokens/api.html#currentCryptoProviderName	proc currentCryptoProviderName(): string		79
+nim	currentCryptoProvider	webtokens/api.html#currentCryptoProvider	proc currentCryptoProvider(): CryptoProvider		80
+nim	setCryptoProvider	webtokens/api.html#setCryptoProvider,string	proc setCryptoProvider(name: string)		81
+nim	setCryptoProvider	webtokens/api.html#setCryptoProvider,jwt_crypto_provider_t	proc setCryptoProvider(prov: CryptoProvider)		84
+nim	loadJwkSetFromJson	webtokens/api.html#loadJwkSetFromJson,string	proc loadJwkSetFromJson(jsonStr: string): JwkSet		89
+nim	loadJwkSetFromFile	webtokens/api.html#loadJwkSetFromFile,string	proc loadJwkSetFromFile(path: string): JwkSet		95
+nim	loadJwkSetFromUrl	webtokens/api.html#loadJwkSetFromUrl,string,bool	proc loadJwkSetFromUrl(url: string; verifyTls: bool = true): JwkSet		101
+nim	count	webtokens/api.html#count,JwkSet	proc count(set: JwkSet): int		107
+nim	itemByIndex	webtokens/api.html#itemByIndex,JwkSet,int	proc itemByIndex(set: JwkSet; idx: int): JwkItem		111
+nim	findByKid	webtokens/api.html#findByKid,JwkSet,string	proc findByKid(set: JwkSet; kid: string): JwkItem		119
+nim	isPrivate	webtokens/api.html#isPrivate,JwkItem	proc isPrivate(it: JwkItem): bool		127
+nim	itemAlg	webtokens/api.html#itemAlg,JwkItem	proc itemAlg(it: JwkItem): Alg		128
+nim	itemKeyType	webtokens/api.html#itemKeyType,JwkItem	proc itemKeyType(it: JwkItem): jwk_key_type_t		129
+nim	itemUse	webtokens/api.html#itemUse,JwkItem	proc itemUse(it: JwkItem): jwk_pub_key_use_t		130
+nim	itemKid	webtokens/api.html#itemKid,JwkItem	proc itemKid(it: JwkItem): string		131
+nim	itemCurve	webtokens/api.html#itemCurve,JwkItem	proc itemCurve(it: JwkItem): string		132
+nim	itemPem	webtokens/api.html#itemPem,JwkItem	proc itemPem(it: JwkItem): string		133
+nim	itemOctKey	webtokens/api.html#itemOctKey,JwkItem	proc itemOctKey(it: JwkItem): seq[byte]		136
+nim	newJwtBuilder	webtokens/api.html#newJwtBuilder	proc newJwtBuilder(): JwtBuilder		146
+nim	setKey	webtokens/api.html#setKey,JwtBuilder,jwt_alg_t,JwkItem	proc setKey(b: JwtBuilder; alg: Alg; key: JwkItem)		153
+nim	enableIat	webtokens/api.html#enableIat,JwtBuilder	proc enableIat(b: JwtBuilder; enable = true)		159
+nim	setHeader	webtokens/api.html#setHeader,JwtBuilder,string,string	proc setHeader(b: JwtBuilder; name: string; value: string)		164
+nim	setHeader	webtokens/api.html#setHeader,JwtBuilder,string,bool	proc setHeader(b: JwtBuilder; name: string; value: bool)		170
+nim	setHeader	webtokens/api.html#setHeader,JwtBuilder,string,int64	proc setHeader(b: JwtBuilder; name: string; value: int64)		176
+nim	setHeaderJson	webtokens/api.html#setHeaderJson,JwtBuilder,string,JsonNode	proc setHeaderJson(b: JwtBuilder; name: string; value: JsonNode)		182
+nim	setClaim	webtokens/api.html#setClaim,JwtBuilder,string,string	proc setClaim(b: JwtBuilder; name: string; value: string)		188
+nim	setClaim	webtokens/api.html#setClaim,JwtBuilder,string,int64	proc setClaim(b: JwtBuilder; name: string; value: int64)		194
+nim	setClaim	webtokens/api.html#setClaim,JwtBuilder,string,bool	proc setClaim(b: JwtBuilder; name: string; value: bool)		200
+nim	setClaimJson	webtokens/api.html#setClaimJson,JwtBuilder,string,JsonNode	proc setClaimJson(b: JwtBuilder; name: string; value: JsonNode)		206
+nim	`[]=`	webtokens/api.html#[]=,JwtBuilder,string,string	proc `[]=`(b: JwtBuilder; name: string; value: string)		214
+nim	`[]=`	webtokens/api.html#[]=,JwtBuilder,string,int64	proc `[]=`(b: JwtBuilder; name: string; value: int64)		218
+nim	`[]=`	webtokens/api.html#[]=,JwtBuilder,string,bool	proc `[]=`(b: JwtBuilder; name: string; value: bool)		222
+nim	`[]=`	webtokens/api.html#[]=,JwtBuilder,string,JsonNode	proc `[]=`(b: JwtBuilder; name: string; value: JsonNode)		226
+nim	setAud	webtokens/api.html#setAud,JwtBuilder,string	proc setAud(b: JwtBuilder; aud: string)		230
+nim	setAud	webtokens/api.html#setAud,JwtBuilder,openArray[string]	proc setAud(b: JwtBuilder; aud: openArray[string])		234
+nim	setIss	webtokens/api.html#setIss,JwtBuilder,string	proc setIss(b: JwtBuilder; iss: string)		239
+nim	setSub	webtokens/api.html#setSub,JwtBuilder,string	proc setSub(b: JwtBuilder; sub: string)		243
+nim	setAud	webtokens/api.html#setAud,JwtBuilder,	proc setAud(b: JwtBuilder; aud: string | seq[string])		247
+nim	setExp	webtokens/api.html#setExp,JwtBuilder,Time	proc setExp(b: JwtBuilder; exp: Time)		254
+nim	setExpIn	webtokens/api.html#setExpIn,JwtBuilder,int64	proc setExpIn(b: JwtBuilder; seconds: int64)		258
+nim	setNbf	webtokens/api.html#setNbf,JwtBuilder,Time	proc setNbf(b: JwtBuilder; nbf: Time)		262
+nim	setIat	webtokens/api.html#setIat,JwtBuilder,Time	proc setIat(b: JwtBuilder; iat: Time = getTime())		266
+nim	setJti	webtokens/api.html#setJti,JwtBuilder,string	proc setJti(b: JwtBuilder; jti: string)		270
+nim	timeOffset	webtokens/api.html#timeOffset,JwtBuilder,jwt_claims_t,int64	proc timeOffset(b: JwtBuilder; claim: ClaimKind; seconds: int64)		274
+nim	generate	webtokens/api.html#generate,JwtBuilder	proc generate(b: JwtBuilder): string		279
+nim	newJwtChecker	webtokens/api.html#newJwtChecker	proc newJwtChecker(): JwtChecker		288
+nim	setKey	webtokens/api.html#setKey,JwtChecker,jwt_alg_t,JwkItem	proc setKey(c: JwtChecker; alg: Alg; key: JwkItem)		294
+nim	b64urlDecode	webtokens/api.html#b64urlDecode,string	proc b64urlDecode(s: string): string		298
+nim	parsePayloadJson	webtokens/api.html#parsePayloadJson,string	proc parsePayloadJson(token: string): JsonNode		304
+nim	setLeeway	webtokens/api.html#setLeeway,JwtChecker,jwt_claims_t,int64	proc setLeeway(c: JwtChecker; claim: ClaimKind; seconds: int64)		311
+nim	verify	webtokens/api.html#verify,JwtChecker,string	proc verify(c: JwtChecker; token: string): bool		316
+nim	getClaim	webtokens/api.html#getClaim,JwtChecker,jwt_claims_t	proc getClaim(c: JwtChecker; kind: ClaimKind): string		340
+nim	fromPayload	webtokens/api.html#fromPayload,JwtChecker,string	proc fromPayload(c: JwtChecker; key: string): JsonNode		358
+nim	iss	webtokens/api.html#iss,JwtChecker	proc iss(c: JwtChecker): string		363
+nim	sub	webtokens/api.html#sub,JwtChecker	proc sub(c: JwtChecker): string		364
+nim	aud	webtokens/api.html#aud,JwtChecker	proc aud(c: JwtChecker): string		365
+nim	jti	webtokens/api.html#jti,JwtChecker	proc jti(c: JwtChecker): string		366
+nim	claimTime	webtokens/api.html#claimTime,JwtChecker,jwt_claims_t	proc claimTime(c: JwtChecker; kind: ClaimKind): Time		368
+nimgrp	setkey	webtokens/api.html#setKey-procs-all	proc		153
+nimgrp	[]=	webtokens/api.html#[]=-procs-all	proc		214
+nimgrp	setheader	webtokens/api.html#setHeader-procs-all	proc		164
+nimgrp	setclaim	webtokens/api.html#setClaim-procs-all	proc		188
+nimgrp	setaud	webtokens/api.html#setAud-procs-all	proc		230
+nimgrp	setcryptoprovider	webtokens/api.html#setCryptoProvider-procs-all	proc		81

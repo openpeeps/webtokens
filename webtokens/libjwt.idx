@@ -1,0 +1,109 @@
+nimTitle	libjwt	webtokens/libjwt.html	module webtokens/libjwt		0
+nim	time_t	webtokens/libjwt.html#time_t	type time_t		25
+nim	jwt_long_t	webtokens/libjwt.html#jwt_long_t	type jwt_long_t		26
+nim	jwt_t	webtokens/libjwt.html#jwt_t	object jwt_t		28
+nim	jwk_set_t	webtokens/libjwt.html#jwk_set_t	object jwk_set_t		31
+nim	jwt_alg_t	webtokens/libjwt.html#jwt_alg_t	enum jwt_alg_t		34
+nim	jwt_crypto_provider_t	webtokens/libjwt.html#jwt_crypto_provider_t	enum jwt_crypto_provider_t		52
+nim	jwk_key_type_t	webtokens/libjwt.html#jwk_key_type_t	enum jwk_key_type_t		59
+nim	jwk_pub_key_use_t	webtokens/libjwt.html#jwk_pub_key_use_t	enum jwk_pub_key_use_t		66
+nim	jwk_key_op_t	webtokens/libjwt.html#jwk_key_op_t	enum jwk_key_op_t		71
+nim	jwt_value_type_t	webtokens/libjwt.html#jwt_value_type_t	enum jwt_value_type_t		83
+nim	jwt_value_error_t	webtokens/libjwt.html#jwt_value_error_t	enum jwt_value_error_t		91
+nim	JWTValue	webtokens/libjwt.html#JWTValue	type JWTValue		99
+nim	jwt_value_t	webtokens/libjwt.html#jwt_value_t	object jwt_value_t		102
+nim	jwk_item_t	webtokens/libjwt.html#jwk_item_t	object jwk_item_t		119
+nim	jwt_malloc_t	webtokens/libjwt.html#jwt_malloc_t	type jwt_malloc_t		122
+nim	jwt_free_t	webtokens/libjwt.html#jwt_free_t	type jwt_free_t		123
+nim	jwt_config_t	webtokens/libjwt.html#jwt_config_t	object jwt_config_t		125
+nim	jwt_callback_t	webtokens/libjwt.html#jwt_callback_t	type jwt_callback_t		130
+nim	jwt_claims_t	webtokens/libjwt.html#jwt_claims_t	enum jwt_claims_t		132
+nim	jwt_builder_t	webtokens/libjwt.html#jwt_builder_t	object jwt_builder_t		141
+nim	jwt_checker_t	webtokens/libjwt.html#jwt_checker_t	object jwt_checker_t		144
+nim	jwt_get_alg	webtokens/libjwt.html#jwt_get_alg,ptr.jwt_t	proc jwt_get_alg(jwt: ptr jwt_t): jwt_alg_t		149
+nim	jwt_builder_new	webtokens/libjwt.html#jwt_builder_new	proc jwt_builder_new(): ptr jwt_builder_t		151
+nim	jwt_builder_free	webtokens/libjwt.html#jwt_builder_free,ptr.jwt_builder_t	proc jwt_builder_free(builder: ptr jwt_builder_t)		152
+nim	jwt_builder_error	webtokens/libjwt.html#jwt_builder_error,ptr.jwt_builder_t	proc jwt_builder_error(builder: ptr jwt_builder_t): cint		153
+nim	jwt_builder_error_msg	webtokens/libjwt.html#jwt_builder_error_msg,ptr.jwt_builder_t	proc jwt_builder_error_msg(builder: ptr jwt_builder_t): cstring		154
+nim	jwt_builder_error_clear	webtokens/libjwt.html#jwt_builder_error_clear,ptr.jwt_builder_t	proc jwt_builder_error_clear(builder: ptr jwt_builder_t)		155
+nim	jwt_builder_setkey	webtokens/libjwt.html#jwt_builder_setkey,ptr.jwt_builder_t,jwt_alg_t,ptr.jwk_item_t	proc jwt_builder_setkey(builder: ptr jwt_builder_t; alg: jwt_alg_t;\n                   key: ptr jwk_item_t): cint		156
+nim	jwt_builder_enable_iat	webtokens/libjwt.html#jwt_builder_enable_iat,ptr.jwt_builder_t,cint	proc jwt_builder_enable_iat(builder: ptr jwt_builder_t; enable: cint): cint		157
+nim	jwt_builder_setcb	webtokens/libjwt.html#jwt_builder_setcb,ptr.jwt_builder_t,jwt_callback_t,pointer	proc jwt_builder_setcb(builder: ptr jwt_builder_t; cb: jwt_callback_t; ctx: pointer): cint		158
+nim	jwt_builder_getctx	webtokens/libjwt.html#jwt_builder_getctx,ptr.jwt_builder_t	proc jwt_builder_getctx(builder: ptr jwt_builder_t): pointer		159
+nim	jwt_builder_generate	webtokens/libjwt.html#jwt_builder_generate,ptr.jwt_builder_t	proc jwt_builder_generate(builder: ptr jwt_builder_t): cstring		160
+nim	jwt_builder_header_set	webtokens/libjwt.html#jwt_builder_header_set,ptr.jwt_builder_t,ptr.jwt_value_t	proc jwt_builder_header_set(builder: ptr jwt_builder_t; value: ptr jwt_value_t): jwt_value_error_t		161
+nim	jwt_builder_header_get	webtokens/libjwt.html#jwt_builder_header_get,ptr.jwt_builder_t,ptr.jwt_value_t	proc jwt_builder_header_get(builder: ptr jwt_builder_t; value: ptr jwt_value_t): jwt_value_error_t		162
+nim	jwt_builder_header_del	webtokens/libjwt.html#jwt_builder_header_del,ptr.jwt_builder_t,cstring	proc jwt_builder_header_del(builder: ptr jwt_builder_t; header: cstring): jwt_value_error_t		163
+nim	jwt_builder_claim_set	webtokens/libjwt.html#jwt_builder_claim_set,ptr.jwt_builder_t,ptr.jwt_value_t	proc jwt_builder_claim_set(builder: ptr jwt_builder_t; value: ptr jwt_value_t): jwt_value_error_t		164
+nim	jwt_builder_claim_get	webtokens/libjwt.html#jwt_builder_claim_get,ptr.jwt_builder_t,ptr.jwt_value_t	proc jwt_builder_claim_get(builder: ptr jwt_builder_t; value: ptr jwt_value_t): jwt_value_error_t		165
+nim	jwt_builder_claim_del	webtokens/libjwt.html#jwt_builder_claim_del,ptr.jwt_builder_t,cstring	proc jwt_builder_claim_del(builder: ptr jwt_builder_t; claim: cstring): jwt_value_error_t		166
+nim	jwt_builder_time_offset	webtokens/libjwt.html#jwt_builder_time_offset,ptr.jwt_builder_t,jwt_claims_t,time_t	proc jwt_builder_time_offset(builder: ptr jwt_builder_t; claim: jwt_claims_t;\n                        secs: time_t): cint		167
+nim	jwt_checker_new	webtokens/libjwt.html#jwt_checker_new	proc jwt_checker_new(): ptr jwt_checker_t		169
+nim	jwt_checker_free	webtokens/libjwt.html#jwt_checker_free,ptr.jwt_checker_t	proc jwt_checker_free(checker: ptr jwt_checker_t)		170
+nim	jwt_checker_error	webtokens/libjwt.html#jwt_checker_error,ptr.jwt_checker_t	proc jwt_checker_error(checker: ptr jwt_checker_t): cint		171
+nim	jwt_checker_error_msg	webtokens/libjwt.html#jwt_checker_error_msg,ptr.jwt_checker_t	proc jwt_checker_error_msg(checker: ptr jwt_checker_t): cstring		172
+nim	jwt_checker_error_clear	webtokens/libjwt.html#jwt_checker_error_clear,ptr.jwt_checker_t	proc jwt_checker_error_clear(checker: ptr jwt_checker_t)		173
+nim	jwt_checker_setkey	webtokens/libjwt.html#jwt_checker_setkey,ptr.jwt_checker_t,jwt_alg_t,ptr.jwk_item_t	proc jwt_checker_setkey(checker: ptr jwt_checker_t; alg: jwt_alg_t;\n                   key: ptr jwk_item_t): cint		174
+nim	jwt_checker_setcb	webtokens/libjwt.html#jwt_checker_setcb,ptr.jwt_checker_t,jwt_callback_t,pointer	proc jwt_checker_setcb(checker: ptr jwt_checker_t; cb: jwt_callback_t; ctx: pointer): cint		175
+nim	jwt_checker_getctx	webtokens/libjwt.html#jwt_checker_getctx,ptr.jwt_checker_t	proc jwt_checker_getctx(checker: ptr jwt_checker_t): pointer		176
+nim	jwt_checker_verify	webtokens/libjwt.html#jwt_checker_verify,ptr.jwt_checker_t,cstring	proc jwt_checker_verify(checker: ptr jwt_checker_t; token: cstring): cint		177
+nim	jwt_checker_claim_get	webtokens/libjwt.html#jwt_checker_claim_get,ptr.jwt_checker_t,jwt_claims_t	proc jwt_checker_claim_get(checker: ptr jwt_checker_t; typ: jwt_claims_t): cstring		178
+nim	jwt_checker_claim_set	webtokens/libjwt.html#jwt_checker_claim_set,ptr.jwt_checker_t,jwt_claims_t,cstring	proc jwt_checker_claim_set(checker: ptr jwt_checker_t; typ: jwt_claims_t;\n                      value: cstring): cint		179
+nim	jwt_checker_claim_del	webtokens/libjwt.html#jwt_checker_claim_del,ptr.jwt_checker_t,jwt_claims_t	proc jwt_checker_claim_del(checker: ptr jwt_checker_t; typ: jwt_claims_t): cint		180
+nim	jwt_checker_time_leeway	webtokens/libjwt.html#jwt_checker_time_leeway,ptr.jwt_checker_t,jwt_claims_t,time_t	proc jwt_checker_time_leeway(checker: ptr jwt_checker_t; claim: jwt_claims_t;\n                        secs: time_t): cint		181
+nim	jwt_header_set	webtokens/libjwt.html#jwt_header_set,ptr.jwt_t,ptr.jwt_value_t	proc jwt_header_set(jwt: ptr jwt_t; value: ptr jwt_value_t): jwt_value_error_t		183
+nim	jwt_header_get	webtokens/libjwt.html#jwt_header_get,ptr.jwt_t,ptr.jwt_value_t	proc jwt_header_get(jwt: ptr jwt_t; value: ptr jwt_value_t): jwt_value_error_t		184
+nim	jwt_header_del	webtokens/libjwt.html#jwt_header_del,ptr.jwt_t,cstring	proc jwt_header_del(jwt: ptr jwt_t; header: cstring): jwt_value_error_t		185
+nim	jwt_claim_set	webtokens/libjwt.html#jwt_claim_set,ptr.jwt_t,ptr.jwt_value_t	proc jwt_claim_set(jwt: ptr jwt_t; value: ptr jwt_value_t): jwt_value_error_t		186
+nim	jwt_claim_get	webtokens/libjwt.html#jwt_claim_get,ptr.jwt_t,ptr.jwt_value_t	proc jwt_claim_get(jwt: ptr jwt_t; value: ptr jwt_value_t): jwt_value_error_t		187
+nim	jwt_claim_del	webtokens/libjwt.html#jwt_claim_del,ptr.jwt_t,cstring	proc jwt_claim_del(jwt: ptr jwt_t; claim: cstring): jwt_value_error_t		188
+nim	jwt_alg_str	webtokens/libjwt.html#jwt_alg_str,jwt_alg_t	proc jwt_alg_str(alg: jwt_alg_t): cstring		190
+nim	jwt_str_alg	webtokens/libjwt.html#jwt_str_alg,cstring	proc jwt_str_alg(alg: cstring): jwt_alg_t		191
+nim	jwks_load	webtokens/libjwt.html#jwks_load,ptr.jwk_set_t,cstring	proc jwks_load(jwk_set: ptr jwk_set_t; jwk_json_str: cstring): ptr jwk_set_t		193
+nim	jwks_load_strn	webtokens/libjwt.html#jwks_load_strn,ptr.jwk_set_t,cstring,csize_t	proc jwks_load_strn(jwk_set: ptr jwk_set_t; jwk_json_str: cstring; len: csize_t): ptr jwk_set_t		194
+nim	jwks_load_fromfile	webtokens/libjwt.html#jwks_load_fromfile,ptr.jwk_set_t,cstring	proc jwks_load_fromfile(jwk_set: ptr jwk_set_t; file_name: cstring): ptr jwk_set_t		195
+nim	jwks_load_fromfp	webtokens/libjwt.html#jwks_load_fromfp,ptr.jwk_set_t,pointer	proc jwks_load_fromfp(jwk_set: ptr jwk_set_t; input: pointer): ptr jwk_set_t		196
+nim	jwks_load_fromurl	webtokens/libjwt.html#jwks_load_fromurl,ptr.jwk_set_t,cstring,cint	proc jwks_load_fromurl(jwk_set: ptr jwk_set_t; url: cstring; verify: cint): ptr jwk_set_t		197
+nim	jwks_create	webtokens/libjwt.html#jwks_create,cstring	proc jwks_create(jwk_json_str: cstring): ptr jwk_set_t		198
+nim	jwks_create_strn	webtokens/libjwt.html#jwks_create_strn,cstring,csize_t	proc jwks_create_strn(jwk_json_str: cstring; len: csize_t): ptr jwk_set_t		199
+nim	jwks_create_fromfile	webtokens/libjwt.html#jwks_create_fromfile,cstring	proc jwks_create_fromfile(file_name: cstring): ptr jwk_set_t		200
+nim	jwks_create_fromfp	webtokens/libjwt.html#jwks_create_fromfp,pointer	proc jwks_create_fromfp(input: pointer): ptr jwk_set_t		201
+nim	jwks_create_fromurl	webtokens/libjwt.html#jwks_create_fromurl,cstring,cint	proc jwks_create_fromurl(url: cstring; verify: cint): ptr jwk_set_t		202
+nim	jwks_error	webtokens/libjwt.html#jwks_error,ptr.jwk_set_t	proc jwks_error(jwk_set: ptr jwk_set_t): cint		203
+nim	jwks_error_any	webtokens/libjwt.html#jwks_error_any,ptr.jwk_set_t	proc jwks_error_any(jwk_set: ptr jwk_set_t): cint		204
+nim	jwks_error_msg	webtokens/libjwt.html#jwks_error_msg,ptr.jwk_set_t	proc jwks_error_msg(jwk_set: ptr jwk_set_t): cstring		205
+nim	jwks_error_clear	webtokens/libjwt.html#jwks_error_clear,ptr.jwk_set_t	proc jwks_error_clear(jwk_set: ptr jwk_set_t)		206
+nim	jwks_free	webtokens/libjwt.html#jwks_free,ptr.jwk_set_t	proc jwks_free(jwk_set: ptr jwk_set_t)		207
+nim	jwks_item_get	webtokens/libjwt.html#jwks_item_get,ptr.jwk_set_t,csize_t	proc jwks_item_get(jwk_set: ptr jwk_set_t; index: csize_t): ptr jwk_item_t		209
+nim	jwks_find_bykid	webtokens/libjwt.html#jwks_find_bykid,ptr.jwk_set_t,cstring	proc jwks_find_bykid(jwk_set: ptr jwk_set_t; kid: cstring): ptr jwk_item_t		210
+nim	jwks_item_is_private	webtokens/libjwt.html#jwks_item_is_private,ptr.jwk_item_t	proc jwks_item_is_private(item: ptr jwk_item_t): cint		211
+nim	jwks_item_error	webtokens/libjwt.html#jwks_item_error,ptr.jwk_item_t	proc jwks_item_error(item: ptr jwk_item_t): cint		212
+nim	jwks_item_error_msg	webtokens/libjwt.html#jwks_item_error_msg,ptr.jwk_item_t	proc jwks_item_error_msg(item: ptr jwk_item_t): cstring		213
+nim	jwks_item_curve	webtokens/libjwt.html#jwks_item_curve,ptr.jwk_item_t	proc jwks_item_curve(item: ptr jwk_item_t): cstring		214
+nim	jwks_item_kid	webtokens/libjwt.html#jwks_item_kid,ptr.jwk_item_t	proc jwks_item_kid(item: ptr jwk_item_t): cstring		215
+nim	jwks_item_alg	webtokens/libjwt.html#jwks_item_alg,ptr.jwk_item_t	proc jwks_item_alg(item: ptr jwk_item_t): jwt_alg_t		216
+nim	jwks_item_kty	webtokens/libjwt.html#jwks_item_kty,ptr.jwk_item_t	proc jwks_item_kty(item: ptr jwk_item_t): jwk_key_type_t		217
+nim	jwks_item_use	webtokens/libjwt.html#jwks_item_use,ptr.jwk_item_t	proc jwks_item_use(item: ptr jwk_item_t): jwk_pub_key_use_t		218
+nim	jwks_item_key_ops	webtokens/libjwt.html#jwks_item_key_ops,ptr.jwk_item_t	proc jwks_item_key_ops(item: ptr jwk_item_t): jwk_key_op_t		219
+nim	jwks_item_pem	webtokens/libjwt.html#jwks_item_pem,ptr.jwk_item_t	proc jwks_item_pem(item: ptr jwk_item_t): cstring		220
+nim	jwks_item_key_oct	webtokens/libjwt.html#jwks_item_key_oct,ptr.jwk_item_t,ptr.ptr.uint8,ptr.csize_t	proc jwks_item_key_oct(item: ptr jwk_item_t; buf: ptr ptr uint8; len: ptr csize_t): cint		221
+nim	jwks_item_key_bits	webtokens/libjwt.html#jwks_item_key_bits,ptr.jwk_item_t	proc jwks_item_key_bits(item: ptr jwk_item_t): cint		222
+nim	jwks_item_free	webtokens/libjwt.html#jwks_item_free,ptr.jwk_set_t,csize_t	proc jwks_item_free(jwk_set: ptr jwk_set_t; index: csize_t): cint		223
+nim	jwks_item_free_all	webtokens/libjwt.html#jwks_item_free_all,ptr.jwk_set_t	proc jwks_item_free_all(jwk_set: ptr jwk_set_t): cint		224
+nim	jwks_item_free_bad	webtokens/libjwt.html#jwks_item_free_bad,ptr.jwk_set_t	proc jwks_item_free_bad(jwk_set: ptr jwk_set_t): cint		225
+nim	jwks_item_count	webtokens/libjwt.html#jwks_item_count,ptr.jwk_set_t	proc jwks_item_count(jwk_set: ptr jwk_set_t): csize_t		226
+nim	jwt_set_alloc	webtokens/libjwt.html#jwt_set_alloc,jwt_malloc_t,jwt_free_t	proc jwt_set_alloc(pmalloc: jwt_malloc_t; pfree: jwt_free_t): cint		228
+nim	jwt_get_alloc	webtokens/libjwt.html#jwt_get_alloc,ptr.jwt_malloc_t,ptr.jwt_free_t	proc jwt_get_alloc(pmalloc: ptr jwt_malloc_t; pfree: ptr jwt_free_t)		229
+nim	jwt_get_crypto_ops	webtokens/libjwt.html#jwt_get_crypto_ops	proc jwt_get_crypto_ops(): cstring		231
+nim	jwt_get_crypto_ops_t	webtokens/libjwt.html#jwt_get_crypto_ops_t	proc jwt_get_crypto_ops_t(): jwt_crypto_provider_t		232
+nim	jwt_set_crypto_ops	webtokens/libjwt.html#jwt_set_crypto_ops,cstring	proc jwt_set_crypto_ops(opname: cstring): cint		233
+nim	jwt_set_crypto_ops_t	webtokens/libjwt.html#jwt_set_crypto_ops_t,jwt_crypto_provider_t	proc jwt_set_crypto_ops_t(opname: jwt_crypto_provider_t): cint		234
+nim	jwt_crypto_ops_supports_jwk	webtokens/libjwt.html#jwt_crypto_ops_supports_jwk	proc jwt_crypto_ops_supports_jwk(): cint		235
+nim	jwt_set_GET_INT	webtokens/libjwt.html#jwt_set_GET_INT.t,jwt_value_t,cstring	template jwt_set_GET_INT(v: var jwt_value_t; n: cstring)		239
+nim	jwt_set_GET_STR	webtokens/libjwt.html#jwt_set_GET_STR.t,jwt_value_t,cstring	template jwt_set_GET_STR(v: var jwt_value_t; n: cstring)		245
+nim	jwt_set_GET_BOOL	webtokens/libjwt.html#jwt_set_GET_BOOL.t,jwt_value_t,cstring	template jwt_set_GET_BOOL(v: var jwt_value_t; n: cstring)		251
+nim	jwt_set_GET_JSON	webtokens/libjwt.html#jwt_set_GET_JSON.t,jwt_value_t,cstring	template jwt_set_GET_JSON(v: var jwt_value_t; n: cstring)		257
+nim	jwtValueSetInt	webtokens/libjwt.html#jwtValueSetInt,cstring,jwt_long_t	proc jwtValueSetInt(name: cstring; value: jwt_long_t): jwt_value_t		264
+nim	jwtValueSetStr	webtokens/libjwt.html#jwtValueSetStr,cstring,cstring	proc jwtValueSetStr(name: cstring; value: cstring): jwt_value_t		274
+nim	jwtValueSetBool	webtokens/libjwt.html#jwtValueSetBool,cstring,cint	proc jwtValueSetBool(name: cstring; value: cint): jwt_value_t		284
+nim	jwtValueSetJson	webtokens/libjwt.html#jwtValueSetJson,cstring,cstring	proc jwtValueSetJson(name: cstring; value: cstring): jwt_value_t		294

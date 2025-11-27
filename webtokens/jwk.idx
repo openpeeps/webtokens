@@ -1,0 +1,3 @@
+nimTitle	jwk	webtokens/jwk.html	module webtokens/jwk		0
+nim	generateOctJwk	webtokens/jwk.html#generateOctJwk,string,string,int	proc generateOctJwk(kid = "hmac-key"; alg = "HS256"; keyLen = 32): JsonNode		24
+nim	generateJwkSet	webtokens/jwk.html#generateJwkSet,int,int	proc generateJwkSet(count = 1; keyLen = 32): JsonNode		39
