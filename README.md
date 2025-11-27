@@ -68,5 +68,5 @@ _todo more examples_
 - 😎 [Get €20 in cloud credits from Hetzner](https://hetzner.cloud/?ref=Hm0mYGM9NxZ4)
 
 ### 🎩 License
-Made by Humans from OpenPeeps](https://github.com/openpeeps).<br>
+Made by [Humans from OpenPeeps](https://github.com/openpeeps).<br>
 Copyright OpenPeeps & Contributors &mdash; All rights reserved.
