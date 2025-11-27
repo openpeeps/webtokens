@@ -1,29 +1,31 @@
 <p align="center">
-  <img src="https://github.com/openpeeps/PKG/blob/main/.github/logo.png" width="90px"><br>
-  OpenPeeps repository template for developing libraries,<br>projects and other cool things. 👑 Written in Nim language
+  👑 Nim Bindings for LibJWT &mdash; JSON Web Token Library
 </p>
 
 <p align="center">
-  <code>nimble install {PKG}</code>
+  <code>nimble install webtokens</code>
 </p>
 
 <p align="center">
   <a href="https://github.com/">API reference</a><br>
-  <img src="https://github.com/openpeeps/pistachio/workflows/test/badge.svg" alt="Github Actions">  <img src="https://github.com/openpeeps/pistachio/workflows/docs/badge.svg" alt="Github Actions">
+  <img src="https://github.com/openpeeps/webtokens/workflows/test/badge.svg" alt="Github Actions">  <img src="https://github.com/openpeeps/webtokens/workflows/docs/badge.svg" alt="Github Actions">
 </p>
 
-## 😍 Key Features
-- [x] Open Source | `MIT` License
-- [x] Written in Nim language
+## About
+This package provides Nim bindings for [LibJWT](https://github.com/benmcollins/libjwt), a C library that supports the following standards JWS, JWE, JWK, JWA and JWTs. It allows you to create, sign, verify, and decode JSON Web Tokens in your Nim applications.
+
+### Prerequisites
+Check the official [LibJWT installation guide](https://github.com/benmcollins/libjwt?tab=readme-ov-file#construction-build-prerequisites)
+
 
 ## Examples
 ...
 
 ### ❤ Contributions & Support
-- 🐛 Found a bug? [Create a new Issue](/issues)
-- 👋 Wanna help? [Fork it!](/fork)
+- 🐛 Found a bug? [Create a new Issue](https://github.com/openpeeps/webtokens/issues)
+- 👋 Wanna help? [Fork it!](https://github.com/openpeeps/webtokens/fork)
 - 😎 [Get €20 in cloud credits from Hetzner](https://hetzner.cloud/?ref=Hm0mYGM9NxZ4)
 
 ### 🎩 License
-{PKG} | MIT license. [Made by Humans from OpenPeeps](https://github.com/openpeeps).<br>
+Made by Humans from OpenPeeps](https://github.com/openpeeps).<br>
 Copyright OpenPeeps & Contributors &mdash; All rights reserved.
