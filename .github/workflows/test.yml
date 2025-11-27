@@ -24,7 +24,7 @@ jobs:
       - name: Build libjwt from source
         run: |
           sudo apt-get update
-          sudo apt-get install -y cmake build-essential
+          sudo apt-get install -y cmake build-essential libjansson-dev
           git clone https://github.com/benmcollins/libjwt.git
           cd libjwt
           mkdir build
