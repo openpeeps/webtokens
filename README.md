@@ -1,5 +1,6 @@
 <p align="center">
-  👑 Nim Bindings for LibJWT &mdash; JSON Web Token Library
+  👑 Nim bindings for LibJWT<br>
+  JSON Web Token Library
 </p>
 
 <p align="center">
