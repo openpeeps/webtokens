@@ -16,7 +16,8 @@
 ## About
 This package provides Nim bindings for [LibJWT](https://github.com/benmcollins/libjwt), a C library that supports the following standards JWS, JWE, JWK, JWA and JWTs. It allows you to create, sign, verify, and decode JSON Web Tokens in your Nim applications.
 
-**Low-level and High-level APIs** are provided to work with JWTs, JWKs, and JWS/JWE tokens.
+> [!NOTE]
+> 👌 **Low-level** and **high-level APIs** are provided to work with JWTs, JWKs, and JWS/JWE tokens.
 
 ### Prerequisites
 Check the official [LibJWT installation guide](https://github.com/benmcollins/libjwt?tab=readme-ov-file#construction-build-prerequisites)
